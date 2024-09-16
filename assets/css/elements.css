@@ -1,0 +1,37 @@
+html {
+    background-color: #f06e8f;
+}
+.title{
+    display: flex;
+    justify-content: center;
+}
+.title h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000,
+               1px 1px #000, -1px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+    
+}
+.main{
+    height: 40vh;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 50px;
+}
+.botoes{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin: 3%;
+    gap:5px
+}
+.relogio{
+    font-size: 4.5rem;
+    margin-left: 5%;
+}
