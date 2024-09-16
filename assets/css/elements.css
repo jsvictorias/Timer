@@ -28,7 +28,7 @@ html {
     flex-direction: row;
     justify-content: flex-end;
     align-content: flex-end;
-    margin: 3%;
+    margin-right: 3%;
     gap:5px;
     
 }
@@ -38,4 +38,18 @@ html {
 .relogio{
     font-size: 4.5rem;
     margin-left: 5%;
+}
+
+@media (max-width: 400px){
+    .title h1 {
+        font-size: 2rem;
+    }
+    .botoes {
+        margin: 8%;
+    }
+}
+@media (width: 1024px){
+    .main{
+        height: 45vh;
+    }
 }
