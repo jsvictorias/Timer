@@ -29,7 +29,11 @@ html {
     justify-content: flex-end;
     align-content: flex-end;
     margin: 3%;
-    gap:5px
+    gap:5px;
+    
+}
+.botoes button{
+    cursor: pointer;
 }
 .relogio{
     font-size: 4.5rem;

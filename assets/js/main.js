@@ -3,11 +3,11 @@ const iniciar = document.querySelector('.iniciar');
 const pausar = document.querySelector('.pausar');
 const zerar = document.querySelector('.zerar');
 let segundos = 0;
-let data;
+let seg;
 
 
 function showTime(segundos){
-    data = new Date(segundos * 1000);
+    const data = new Date(segundos * 1000);
     return data.toLocaleTimeString('pt-BR', {
         hour12:false,
         timeZone: 'UTC'
@@ -15,7 +15,7 @@ function showTime(segundos){
 }
 
 function iniciaRelogio(){
-    const seg = setInterval(function(){
+    seg = setInterval(function(){
         segundos++;
         relogio.innerHTML = showTime(segundos);
     }, 1000)
@@ -24,6 +24,7 @@ function iniciaRelogio(){
 
 iniciar.addEventListener('click', function(event) {
     // alert('cliquei no iniciar');
+    clearInterval(seg);
     iniciaRelogio()
 });
 
@@ -31,10 +32,13 @@ iniciar.addEventListener('click', function(event) {
 
 pausar.addEventListener('click', function(event){
     // alert('cliquei no pausar');
-    
+    clearInterval(seg);
 
 });
 
 zerar.addEventListener('click', function(){
-    alert('cliquei no zerar');
+    // alert('cliquei no zerar');
+    clearInterval(seg);
+    segundos = 0;
+    relogio.innerHTML = "00:00:00"
 });
